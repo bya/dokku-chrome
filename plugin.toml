@@ -1,4 +1,4 @@
 [plugin]
 description = "Automated installation of google-chrome"
-version = "0.0.1"
+version = "0.0.2"
 [plugin.config]
