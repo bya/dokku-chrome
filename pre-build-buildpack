@@ -4,7 +4,7 @@ APP="$1"; IMAGE="dokku/$APP"
 echo "-----> Installing google-chrome ..."
 COMMAND=$(cat <<EOF
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 apt-get update
 apt-get install google-chrome-beta
 sleep 1 # wait so that docker run has not exited before docker attach
